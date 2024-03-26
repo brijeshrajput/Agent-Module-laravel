@@ -1,0 +1,80 @@
+{
+    "name": "Agent",
+    "alias": "agent",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Agent\\Providers\\AgentServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "nazmartMetaData": {
+        "style": [],
+        "admin_settings": {
+            "menu_item": [
+                {
+                    "id" : "agents-settings-menu",
+                    "label": "Agents",
+                    "route": "landlord.admin.agent",
+                    "parent": null,
+                    "permissions": ["general-settings-page-settings", "general-settings-site-identity"],
+                    "icon": "mdi mdi-account-card-details"
+                },
+                {
+                    "id" : "agents-view-all",
+                    "label": "View Agents",
+                    "route": "landlord.admin.agent.view",
+                    "parent": "agents-settings-menu",
+                    "permissions": ["general-settings-page-settings"]
+                },
+                {
+                    "id" : "agents-settings-menu-add",
+                    "label": "Add New Agent",
+                    "route": "landlord.admin.agent.new",
+                    "parent": "agents-settings-menu",
+                    "permissions": ["general-settings-page-settings"]
+                },
+                {
+                    "id" : "agents-settings-menu-settings",
+                    "label": "Agent Settings",
+                    "route": "landlord.admin.agent.settings",
+                    "parent": "agents-settings-menu",
+                    "permissions": ["general-settings-page-settings"]
+                },
+                {
+                    "id" : "agents-kyc-form-settings",
+                    "label": "KYC Settings",
+                    "route": "landlord.admin.agent.kyc.form",
+                    "parent": "agents-settings-menu",
+                    "permissions": ["general-settings-page-settings"]
+                },
+                {
+                    "id" : "agents-settings-payments",
+                    "label": "Agent Payments",
+                    "route": "landlord.admin.agent",
+                    "parent": null,
+                    "permissions": ["general-settings-page-settings", "general-settings-site-identity"],
+                    "icon": "mdi mdi-account-card-details"
+                },
+                {
+                    "id" : "agents-settings-payment-requests",
+                    "label": "Payment Requests",
+                    "route": "landlord.admin.agent.payments.requests",
+                    "parent": "agents-settings-payments",
+                    "permissions": ["general-settings-page-settings"]
+                },
+                {
+                    "id" : "agents-settings-payment-history",
+                    "label": "Payment History",
+                    "route": "landlord.admin.agent.payments.history",
+                    "parent": "agents-settings-payments",
+                    "permissions": ["general-settings-page-settings"]
+                }
+            ]
+        },
+        "header_hook": [],
+        "footer_hook": []
+    }
+}
